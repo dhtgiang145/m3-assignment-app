@@ -12,7 +12,11 @@ const basic = auth.basic({
 });
 
 router.get("/", function (req, res) {
-  res.render("form", { title: "Registration form" });
+  res.render("index", { title: "Simple Kitchen" });
+});
+
+router.get("/register", function (req, res) {
+  res.render("form", { title: "Register Form" });
 });
 
 router.post(
@@ -22,14 +26,13 @@ router.post(
     check("email").isLength({ min: 1 }).withMessage("Please enter an email"),
   ],
   function (req, res) {
-    // console.log(req.body);
     const errors = validationResult(req);
     if (errors.isEmpty()) {
       const regis = new registration(req.body);
       regis
         .save()
         .then(() => {
-          res.send("Thank you for your registration!");
+          res.render("thankyou", { title: "Thank You Page" });
         })
         .catch((err) => {
           console.log(err);
@@ -51,7 +54,10 @@ router.get(
     registration
       .find()
       .then((registrations) => {
-        res.render("index", { title: "Listening registrations", registrations });
+        res.render("registration", {
+          title: "Listening registrations",
+          registrations,
+        });
       })
       .catch(() => {
         res.send("Sorry!Something went wrong");

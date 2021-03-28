@@ -1,12 +1,132 @@
-body {
-  padding: 40px 10px;
-  background-color: #eee;
+/* Variables */
+/* Nest Nav */
+nav {
+  width: 100%;
+  font-size: 1em;
+  font-font-weight: bold;
+  float: left;
 }
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  margin: 0 5px 0 0;
+  color: white;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav ul.right li {
+  float: right;
+}
+
+/* Variables */
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  background: #daaa0e;
+}
+
+header {
+  height: 50px;
+  width: 1350px;
+  margin: 0.8em auto 1em auto;
+}
+
+#registertag {
+  color: #313130;
+  float: right;
+}
+
+main {
+  background: white;
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+}
+main #intro-image {
+  float: left;
+  width: 800px;
+}
+main #intro-image img {
+  width: 800px;
+}
+main #intro-text {
+  width: 550px;
+  height: 407px;
+  float: left;
+  background: #d4d5d8;
+  text-align: center;
+  padding-top: 8em;
+}
+main #intro-text h3 {
+  font-size: 2em;
+  color: #313130;
+}
+main #intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+}
+main #registerform {
+  text-align: center;
+}
+main #registerform h2 {
+  padding-top: 2em;
+}
+main #thankyou {
+  text-align: center;
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
+
+button, .submit-buttton {
+  color: white;
+  width: 100px;
+  height: 40px;
+  background: #daaa0e;
+  margin-top: 2em;
+}
+
+.submit-buttton {
+  border: 1px #313130;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  height: 20px;
+}
+
+.btn {
+  height: 30px;
+  color: white;
+  background: #daaa0e;
+}
+
+/* css for registration form and errors */
 .listing-reg h1 {
+  padding-top: 2em;
   text-align: center;
   margin: 0 0 2rem;
 }
-/* css for registration form and errors */
+
 .form-registration {
   max-width: 330px;
   padding: 15px;
@@ -21,6 +141,7 @@ body {
 .form-registration .btn {
   flex: 1 0 100%;
 }
+
 .my-errors {
   margin: 0 auto;
   padding: 0;
@@ -37,20 +158,30 @@ body {
   color: #f00;
   font-weight: bold;
 }
+
 /* Style for listing table */
 .listing-table {
-  width: 100%;
-}
-.listing-table th,
-td {
-  padding: 10px;
-  border-bottom: 1px solid #666;
+  width: 50%;
+  margin-left: 30em;
+  background-color: white;
 }
 .listing-table th {
+  padding: 10px;
+  border-bottom: 1px solid #666;
   background: #000;
   color: #fff;
 }
-.listing-table th:first-child,
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
 .listing-table td:first-child {
   border-right: 1px solid #666;
 }
+
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+
+/*# sourceMappingURL=styles.css.map */
